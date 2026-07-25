@@ -1,22 +1,74 @@
 aid: ctrl
 name: Ctrl
-description: Ctrl is a company surfaced as a portfolio company of earlybird and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Ctrl (Ctrl, Inc., a Delaware corporation) is an AI-powered workspace for
+  revenue and sales teams that consolidates the tools and data a rep needs —
+  CRM, email, calendar, and messaging — into a single actionable view. Founded
+  in 2021 by Omri Sagzan and Aviv Nahum and based in Tel Aviv and London, Ctrl
+  automates the manual work of updating records across apps such as HubSpot,
+  Salesforce, Google Workspace, and Slack, and helps teams codify and replicate
+  their winning sales playbooks. The company raised a $9M seed round led by
+  LocalGlobe and Earlybird in 2023 and was acquired by Sana Labs in October 2024.
+  Ctrl is a UI/workspace product surfaced as an Earlybird portfolio company; it
+  publishes no public developer API, OpenAPI, or SDKs.
 url: https://raw.githubusercontent.com/api-evangelist/ctrl/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/625d8e920c535704a599b545/62ab32f217ec4d3c47eda994_Screenshot%202022-06-16%20164043.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - earlybird
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: Sana Labs
+x-acquired-date: '2024-10-30'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Sales
+- Revenue Operations
+- CRM
+- Productivity
+- Workspace
+- Automation
+- Artificial Intelligence
+- SaaS
 apis: []
+common:
+- type: DomainSecurity
+  url: security/ctrl-domain-security.yml
+- type: Website
+  url: https://www.getctrl.co
+- type: Blog
+  url: https://www.getctrl.co/blog
+- type: Pricing
+  url: https://www.getctrl.co/pricing
+- type: Login
+  url: https://app.getctrl.co/
+- type: TermsOfService
+  url: https://www.getctrl.co/terms
+- type: PrivacyPolicy
+  url: https://www.getctrl.co/privacy-policy
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
