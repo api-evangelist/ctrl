@@ -35,7 +35,7 @@ x-acquired-by: Sana Labs
 x-acquired-date: '2024-10-30'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-18'
+modified: '2026-08-13'
 tags:
 - Company
 - Sales
@@ -56,8 +56,14 @@ common:
   url: https://www.getctrl.co/blog
 - type: Pricing
   url: https://www.getctrl.co/pricing
-- type: Login
-  url: https://app.getctrl.co/
+- type: Plans
+  url: plans/ctrl-plans-pricing.yml
+- type: Packages
+  url: packages/ctrl-packages.yml
+- type: Lifecycle
+  url: lifecycle/ctrl-lifecycle.yml
+- type: LLMsTxt
+  url: llms/ctrl-llms.txt
 - type: TermsOfService
   url: https://www.getctrl.co/terms
 - type: PrivacyPolicy
@@ -67,8 +73,36 @@ maintainers:
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-removed-properties:
+- type: Login
+  url: https://app.getctrl.co/
+  removed: '2026-08-13'
+  reason: >-
+    Subdomain no longer operated by Ctrl. https://app.getctrl.co/ returns HTTP 200 serving
+    "PAUS188", an unrelated Indonesian online-gambling portal on Hostinger. Do not re-add
+    this pointer; see lifecycle/ctrl-lifecycle.yml.
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 5
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Ctrl was absorbed into Sana Labs on 2024-10-30; the marketing site is now a live
+    archive whose own homepage answers 200 with a 404 body, api.getctrl.co has never
+    resolved, and the former application host app.getctrl.co has been taken over by an
+    unrelated Indonesian gambling portal.
+  evidence:
+  - url: https://www.getctrl.co/
+    status: 200
+  - url: https://app.getctrl.co/
+    status: 200
+  - url: https://www.getctrl.co/.well-known/agent-card.json
+    status: 404
+  - url: https://www.getctrl.co/openapi.json
+    status: 404
+  - url: https://www.getctrl.co/llms.txt
+    status: 404
+  checked: '2026-08-13'
