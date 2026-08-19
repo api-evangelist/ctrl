@@ -1,0 +1,49 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  Chrome Web Store listing; plus negative searches of npm, PyPI, RubyGems, crates.io,
+  NuGet, Packagist, pkg.go.dev and Maven Central for a first-party Ctrl client library.
+sdk_count: 0
+note: >-
+  Ctrl ships NO client libraries. The single first-party distributable is an end-user
+  browser extension, not an SDK, so this file carries a `Packages` pointer only — no
+  `SDKs` pointer is wired, because there is no library for a developer to install.
+  Registry searches for a Ctrl / getctrl publisher returned nothing on every registry
+  checked. The extension's own currency is the finding: last published 2024-03-19, seven
+  months before the October 2024 Sana acquisition, and it has not been updated since.
+packages:
+- language: javascript
+  registry: chrome-web-store
+  kind: browser-extension
+  sdk: false
+  name: Ctrl
+  publisher: Get Ctrl Ltd
+  id: jcfdjjglpanljcaffkgenhcbokjcmchg
+  url: https://chromewebstore.google.com/detail/ctrl/jcfdjjglpanljcaffkgenhcbokjcmchg
+  install: Install from the Chrome Web Store
+  official: true
+  version: 2.0.26
+  published: '2024-03-19'
+  users: 36
+  note: >-
+    End-user Chrome extension for the Ctrl sales workspace — the product surface, not a
+    developer package. Version and publish date read from the live Chrome Web Store
+    listing (HTTP 200), which is the only registry metadata this distribution channel
+    exposes.
+registries_checked:
+- registry: npm
+  result: no first-party package found
+- registry: pypi
+  result: no first-party package found
+- registry: rubygems
+  result: no first-party package found
+- registry: crates.io
+  result: no first-party package found
+- registry: nuget
+  result: no first-party package found
+- registry: packagist
+  result: no first-party package found
+- registry: pkg.go.dev
+  result: no first-party package found
+- registry: maven-central
+  result: no first-party package found

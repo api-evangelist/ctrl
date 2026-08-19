@@ -1,0 +1,59 @@
+generated: '2026-08-13'
+method: probed
+source: live HTTP probes of every Ctrl host named in apis.yml
+note: >-
+  Recorded absence. Every /.well-known/ path probed on both Ctrl hosts returned 404 (or a
+  301 to www on the apex), so NO WellKnown / SecurityTxt pointer is wired in apis.yml —
+  this file documents that the surface is not served, it does not assert that it is.
+  Additional context: https://app.getctrl.co/ is no longer operated by Ctrl. It resolves
+  to a Hostinger-hosted Indonesian online-gambling portal ("PAUS188"), so its 404s are the
+  404s of a third party, not of Ctrl.
+hosts:
+- host: https://www.getctrl.co
+  role: marketing site (Webflow), the only host Ctrl still operates
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://app.getctrl.co
+  role: former Ctrl web application — NO LONGER CTRL-OPERATED (see note)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+robots_content_signals:
+  source: https://www.getctrl.co/robots.txt
+  status: 200
+  note: >-
+    Cloudflare-managed robots.txt block. Not a /.well-known/ document and not an AIPREF
+    manifest, recorded here only because it is the one machine-readable preference signal
+    the domain does serve.
+  signals: search=yes, ai-train=no, use=reference
+  disallowed_agents: [Amazonbot, Applebot-Extended, Bytespider, CCBot, ClaudeBot,
+    CloudflareBrowserRenderingCrawler, Google-Extended, GPTBot, meta-externalagent]

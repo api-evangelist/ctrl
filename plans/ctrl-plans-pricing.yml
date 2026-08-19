@@ -1,0 +1,71 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.getctrl.co/pricing
+http_status: 200
+currency: USD
+plan_count: 3
+note: >-
+  Product pricing for the Ctrl end-user sales workspace — NOT API pricing. Ctrl publishes
+  no developer API, so there is no metered API tier, no quota expressed in API calls, and
+  no rate card. Quotas below are counted in product actions ("CRM updates & AI prompts").
+  The page is a live archive: it carries the banner "Ctrl has been acquired by Sana, read
+  more here", the footer reads "Copyright Ctrl 2024", and every call-to-action ("Try Ctrl
+  Free", "Contact Us") points at https://app.getctrl.co/ — a host Ctrl no longer operates
+  (it now serves an unrelated Indonesian gambling portal). Treat these tiers as the last
+  published state of a discontinued product, not as buyable plans.
+plans:
+- name: Starter
+  price: 0
+  currency: USD
+  billing_period: null
+  price_label: Free forever
+  audience: null
+  quota: Up to 100 CRM updates & AI prompts
+  overage: null
+  cta: Try Ctrl free
+  cta_url: https://app.getctrl.co/
+  includes:
+  - Streamline Salesforce updates with easy record creation and editing
+  - Visualize tasks intuitively using Kanban boards and inline grid views
+  - Get all the context you need before a prospect call
+  - Sync your notes with CRM for seamless record keeping
+  - Perform quick updates in bulk for time-saving efficiency
+  - Create your own pipeline views
+  - Gain flexibility through cross-object views
+  - Tailor Ctrl to your needs with custom objects
+  - Multiple set of fields for different deal stages
+  - Calendar integration to have all the info you need around a meeting
+- name: Premium
+  price: 29
+  currency: USD
+  billing_period: month
+  price_unit: per user
+  price_label: $29 per user, per month
+  audience: For individuals & small teams
+  quota: Unlimited CRM updates and AI prompts
+  overage: null
+  cta: Contact Us
+  includes_previous: Starter
+  includes:
+  - Unlimited CRM updates and AI prompts
+  - Collaborate on deals with your team - notes, tasks, checklists
+  - Pipeline highlights for weekly changes & insights
+  - Share pipeline views, templates and more
+  - AI powered follow up emails & notes
+- name: Business
+  price: null
+  currency: USD
+  billing_period: null
+  price_label: Custom
+  audience: For teams that scale & optimize their sales
+  quota: null
+  overage: null
+  cta: Contact Us
+  includes_previous: Premium
+  includes:
+  - Sales process visualisation & implementation
+  - Suggested checklist, notes and CRM fields per stage
+  - Decision making deal mapping
+  - Automated CRM updates based on calls - notes, tasks, fields
+  - Enhanced collaboration - shared inbox & live notes
+  - CSM support & Custom workflows

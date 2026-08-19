@@ -1,0 +1,51 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  Live probes of getctrl.co hosts on 2026-08-13, plus the provider's own acquisition post
+  at https://www.getctrl.co/blog/ctrl-is-being-acquired-by-sana
+note: >-
+  There is no API lifecycle to record here — Ctrl never published a developer API — so
+  this file records the PRODUCT lifecycle instead, and deliberately wires no StatusPage
+  and no Deprecation pointer, because Ctrl publishes neither.
+api_lifecycle:
+  versioning: null
+  deprecation: null
+  sunset_header: null
+  sla: null
+  status_page: null
+  deprecated_operations: []
+product_lifecycle:
+  status: absorbed
+  acquired_by: Sana Labs
+  acquired_date: '2024-10-30'
+  announcement: https://www.getctrl.co/blog/ctrl-is-being-acquired-by-sana
+  last_content_date: '2024'
+  evidence:
+  - url: https://www.getctrl.co/pricing
+    status: 200
+    observed: >-
+      Site-wide banner "Ctrl has been acquired by Sana, read more here"; footer reads
+      "Copyright Ctrl 2024".
+  - url: https://www.getctrl.co/
+    status: 200
+    observed: >-
+      SOFT 404 — the host answers HTTP 200 with a 195-byte Apache "404 Not Found" body.
+      The marketing homepage no longer resolves; only deep pages (/pricing, /blog,
+      /terms, /privacy-policy) still render.
+  - url: https://app.getctrl.co/
+    status: 200
+    observed: >-
+      SUBDOMAIN NO LONGER CTRL-OPERATED. The former application host now serves
+      "PAUS188", an Indonesian online-gambling portal on Hostinger/LiteSpeed
+      (Last-Modified 2024-06-19), pulling assets from aset.universalaset.cloud. Every
+      sign-up / login / "Try Ctrl Free" call-to-action on the surviving marketing pages
+      still points here.
+  - url: https://api.getctrl.co
+    status: NXDOMAIN
+    observed: No API host has ever resolved for this domain.
+hosts_still_operated:
+- https://www.getctrl.co
+hosts_lost:
+- host: https://app.getctrl.co
+  reason: third-party takeover; serves unrelated gambling content
+  action: apis.yml Login pointer removed 2026-08-13 — do not re-add
