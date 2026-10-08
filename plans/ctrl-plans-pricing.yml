@@ -69,3 +69,30 @@ plans:
   - Automated CRM updates based on calls - notes, tasks, fields
   - Enhanced collaboration - shared inbox & live notes
   - CSM support & Custom workflows
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - hybrid
+  - negotiated
+  units: []
+  plans:
+  - name: Starter
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Premium
+    access: other
+    model: hybrid
+    model_how: derived
+    units: []
+    periods: []
+  - name: Business
+    access: other
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
